@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html xmlns:ui="jakarta.faces.facelets" xmlns:f="jakarta.faces.core" xmlns:h="jakarta.faces.html">
+  <head>
+    <title><ui:insert name="title">Default Title</ui:insert></title>
+  </head>
+
+  <body>
+    <ui:repeat value="#{pokemonController.pokemons}" var="pokemon">
+      <h:commandButton value="#{pokemons}" />
+    </ui:repeat>
+  </body>
+</html>

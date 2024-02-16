@@ -37,7 +37,7 @@ public class PokeApiClient {
         responseType);
   }
 
-  NamedAPIResourceList listPokemon() {
+  public NamedAPIResourceList getPokemonList() {
     return get("/pokemon", NamedAPIResourceList.class);
   }
 }
