@@ -32,6 +32,7 @@ public class PokeApiClient {
   public <T> T get(String path, Class<T> responseType) {
     return gson.fromJson(webTarget
         .path(path)
+        .queryParam("limit", 1000)
         .request(MediaType.APPLICATION_JSON)
         .get(String.class),
         responseType);
@@ -40,4 +41,5 @@ public class PokeApiClient {
   public NamedAPIResourceList getPokemonList() {
     return get("/pokemon", NamedAPIResourceList.class);
   }
+
 }
