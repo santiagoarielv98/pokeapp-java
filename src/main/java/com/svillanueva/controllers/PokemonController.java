@@ -1,5 +1,6 @@
 package com.svillanueva.controllers;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,7 +14,7 @@ import jakarta.inject.Named;
 
 @ViewScoped
 @Named
-public class PokemonController {
+public class PokemonController implements Serializable {
   @Inject
   private PokeApiClient pokeApiClient;
 
