@@ -18,6 +18,19 @@
         completeMethod="#{pokemonController.completeText}"
         scrollHeight="250"
       />
+      <div class="card">
+        <p:dataTable var="pokemon" value="#{pokemonController.pokemons}" rows="10" paginator="true">
+          <p:column headerText="Id">
+            <h:outputText value="#{pokemonController.getPokemon(pokemon.name).id}" />
+          </p:column>
+          <p:column headerText="Imagen">
+            <p:graphicImage value="#{pokemonController.getPokemon(pokemon.name).sprites.front_default}" />
+          </p:column>
+          <p:column headerText="Nombre">
+            <h:outputText value="#{pokemonController.getPokemon(pokemon.name).name}" />
+          </p:column>
+        </p:dataTable>
+      </div>
     </h:form>
   </h:body>
 </html>
